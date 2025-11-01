@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TattooFundz | The Last Tattoo Artist You'll Ever Need</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E63946', // Red
+            dark: '#1D3557',   // Dark Blue (used as a secondary dark color)
+            darker: '#0A0A0A',  // Near-black for main background
+            light: '#F1FAEE',  // Off-white
+            accent: '#A8DADC',  // Light Blue/Cyan (secondary accent)
+            grayText: '#7B8D9E', // Muted text
+          },
+          fontFamily: {
+            // Updated font stack for a modern, edgy look
+            heading: ['Bebas Neue', 'cursive'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            // Custom shadow for the primary CTA button
+            'cta-glow': '0 10px 30px rgba(230, 57, 70, 0.5)',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Custom style for the massive heading text */
+    .hero-heading {
+      font-size: 6rem; /* Tailwind class equivalent: text-6xl, adjusted for Bebas Neue massive look */
+      line-height: 0.9;
+    }
+    /* Simple outline text effect for modern look */
+    .text-outline-light {
+      -webkit-text-stroke: 1px #457B9D; /* Custom color for outline */
+      color: transparent;
+    }
+
+    @media (max-width: 768px) {
+      .hero-heading { font-size: 3.5rem; }
+    }
+  </style>
+</head>
+<body class="bg-darker text-light font-sans antialiased">
+
+  <section class="bg-cover bg-center text-center py-24 md:py-40 relative overflow-hidden" 
+           style="background-image: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), url('https://images.unsplash.com/photo-1519014816548-bf5fe0592f4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="inline-block bg-primary text-light px-4 py-2 rounded-full font-bold text-sm mb-4 shadow-md tracking-widest uppercase">LIMITED SPOTS: 3 BOOKINGS LEFT THIS MONTH</div>
+      
+      <h1 class="font-heading hero-heading text-primary mb-4 drop-shadow-lg [text-shadow:_0_4px_10px_rgba(230,57,70,0.4)]">GET INKED BY TATTOOFUNDZ</h1>
+      
+      <p class="text-xl md:text-2xl max-w-4xl mx-auto mb-8 font-medium text-grayText">Custom, hyper-realistic tattoos that turn heads — guaranteed to love it or your deposit back</p>
+      
+      <div class="inline-block bg-red-900/40 text-red-300 py-3 px-6 rounded-xl font-bold mb-6 border border-red-700/50 animate-pulse">Next Available Slot: November 15th</div>
+      
+      <button class="cta-button bg-primary text-light px-10 py-5 text-xl font-bold rounded-full border-none cursor-pointer transition-all duration-300 shadow-cta-glow hover:scale-[1.03] hover:shadow-2xl hover:shadow-primary/70" 
+              onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">
+        SECURE YOUR SPOT + PAY $150 DEPOSIT
+      </button>
+      
+      <p class="mt-4 text-sm text-grayText">Deposit fully credited toward your tattoo. No flakes. Serious clients only.</p>
+    </div>
+  </section>
+
+  <section class="bg-dark py-20 px-6">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-4xl md:text-5xl font-heading text-primary text-center mb-12 [text-shadow:_0_2px_5px_rgba(230,57,70,0.3)]">THE "NO REGRETS" TATTOO EXPERIENCE</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="bg-darker p-8 rounded-2xl border border-accent/30 transition duration-300 transform hover:scale-[1.02] hover:shadow-xl hover:shadow-accent/10">
+          <h3 class="font-heading text-2xl text-primary mb-3">Custom Concept Design</h3>
+          <p class="text-grayText mb-4">One-of-a-kind sketch tailored to your story. 3 revisions included.</p>
+          <div class="flex items-baseline justify-start">
+            <del class="text-grayText text-sm mr-2">$300</del> 
+            <span class="price text-2xl font-bold text-accent">INCLUDED</span>
+          </div>
+        </div>
+        
+        <div class="bg-darker p-8 rounded-2xl border border-accent/30 transition duration-300 transform hover:scale-[1.02] hover:shadow-xl hover:shadow-accent/10">
+          <h3 class="font-heading text-2xl text-primary mb-3">Premium Sterile Studio</h3>
+          <p class="text-grayText mb-4">Hospital-grade sanitation. Private room. No distractions.</p>
+          <div class="flex items-baseline justify-start">
+            <del class="text-grayText text-sm mr-2">$150</del> 
+            <span class="price text-2xl font-bold text-accent">INCLUDED</span>
+          </div>
+        </div>
+
+        <div class="bg-darker p-8 rounded-2xl border border-accent/30 transition duration-300 transform hover:scale-[1.02] hover:shadow-xl hover:shadow-accent/10">
+          <h3 class="font-heading text-2xl text-primary mb-3">Aftercare Pro Kit</h3>
+          <p class="text-grayText mb-4">Healing balm, wrap, instructions — heal fast, look sharp.</p>
+          <div class="flex items-baseline justify-start">
+            <del class="text-grayText text-sm mr-2">$75</del> 
+            <span class="price text-2xl font-bold text-accent">INCLUDED</span>
+          </div>
+        </div>
+        
+        <div class="bg-darker p-8 rounded-2xl border border-accent/30 transition duration-300 transform hover:scale-[1.02] hover:shadow-xl hover:shadow-accent/10">
+          <h3 class="font-heading text-2xl text-primary mb-3">Lifetime Touch-Up (1x)</h3>
+          <p class="text-grayText mb-4">Free touch-up within 12 months if needed.</p>
+          <div class="flex items-baseline justify-start">
+            <del class="text-grayText text-sm mr-2">$200</del> 
+            <span class="price text-2xl font-bold text-accent">INCLUDED</span>
+          </div>
+        </div>
+        
+      </div>
+      <p class="mt-12 text-center text-xl text-accent font-semibold">
+        Total Bonus Value: $725 — Yours FREE when you book today.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-darker py-20 px-6 border-t border-b border-gray-800">
+    <div class="container mx-auto max-w-4xl text-center">
+      <div class="text-6xl text-primary mb-6">🛡️</div>
+      <h2 class="text-4xl md:text-5xl font-heading text-light mb-6">THE "LOVE IT OR LEAVE IT" GUARANTEE</h2>
+      <p class="text-xl mb-4 text-grayText">Don’t love the final design before we ink? Get your $150 deposit back — no questions asked.</p>
+      <p class="text-lg text-grayText/80">We only tattoo clients who are 100% obsessed with the plan.</p>
+    </div>
+  </section>
+
+  <section class="bg-darker py-20 px-6" id="portfolio">
+    <div class="container mx-auto max-w-7xl">
+      <h2 class="text-4xl md:text-5xl font-heading text-primary text-center mb-12 [text-shadow:_0_2px_5px_rgba(230,57,70,0.3)]">PORTFOLIO: REAL INK, REAL RESULTS</h2>
+      
+      <div class="text-center mb-10">
+        <button class="filter-btn active bg-[#333]/50 text-light border border-grayText/50 px-5 py-2.5 mx-2 rounded-full cursor-pointer transition-all duration-300 hover:bg-primary hover:border-primary/50" onclick="filter('all')">All</button>
+        <button class="filter-btn bg-[#333]/50 text-light border border-grayText/50 px-5 py-2.5 mx-2 rounded-full cursor-pointer transition-all duration-300 hover:bg-primary hover:border-primary/50" onclick="filter('realism')">Realism</button>
+        <button class="filter-btn bg-[#333]/50 text-light border border-grayText/50 px-5 py-2.5 mx-2 rounded-full cursor-pointer transition-all duration-300 hover:bg-primary hover:border-primary/50" onclick="filter('minimal')">Minimal</button>
+        <button class="filter-btn bg-[#333]/50 text-light border border-grayText/50 px-5 py-2.5 mx-2 rounded-full cursor-pointer transition-all duration-300 hover:bg-primary hover:border-primary/50" onclick="filter('color')">Color</button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg group" data-category="realism">
+          <img src="https://images.unsplash.com/photo-160fba64b3d4a-1d5a0b7d1d7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Hyper-realistic portrait" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="overlay absolute inset-x-0 bottom-0 bg-gradient-to-t from-darker to-transparent text-white p-5 pt-12 transform translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+            <h4 class="text-xl font-semibold mb-1">Portrait Realism</h4>
+            <p class="text-sm text-grayText">8 hours | Arm sleeve</p>
+          </div>
+        </div>
+        
+        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg group" data-category="minimal">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Minimal linework" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="overlay absolute inset-x-0 bottom-0 bg-gradient-to-t from-darker to-transparent text-white p-5 pt-12 transform translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+            <h4 class="text-xl font-semibold mb-1">Fine Line Script</h4>
+            <p class="text-sm text-grayText">2 hours | Wrist</p>
+          </div>
+        </div>
+        
+        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg group" data-category="color">
+          <img src="https://images.unsplash.com/photo-1623428187969-6da2b2b5e2e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Vibrant color tattoo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="overlay absolute inset-x-0 bottom-0 bg-gradient-to-t from-darker to-transparent text-white p-5 pt-12 transform translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+            <h4 class="text-xl font-semibold mb-1">Neo-Traditional Color</h4>
+            <p class="text-sm text-grayText">6 hours | Calf</p>
+          </div>
+        </div>
+        
+        <div class="portfolio-item relative overflow-hidden rounded-xl shadow-lg group" data-category="realism">
+          <img src="https://images.unsplash.com/photo-1507705128080-cf96d85915d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Geometric realism tattoo" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <div class="overlay absolute inset-x-0 bottom-0 bg-gradient-to-t from-darker to-transparent text-white p-5 pt-12 transform translate-y-full transition-transform duration-500 group-hover:translate-y-0">
+            <h4 class="text-xl font-semibold mb-1">Geometric Realism</h4>
+            <p class="text-sm text-grayText">4 hours | Bicep</p>
+          </div>
+        </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="bg-dark py-20 px-6" id="testimonials">
+    <div class="container mx-auto max-w-7xl">
+      <h2 class="text-4xl md:text-5xl font-heading text-primary text-center mb-12 [text-shadow:_0_2px_5px_rgba(230,57,70,0.3)]">WHAT CLIENTS ARE SAYING</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <div class="bg-darker rounded-2xl border border-accent/20 overflow-hidden shadow-xl transition duration-300 hover:scale-[1.01] hover:shadow-primary/20 flex flex-col">
+          <div class="h-40 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Client Alex" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          </div>
+          <div class="p-5 flex flex-col h-full">
+            <div class="text-2xl text-[#FFD700] mb-3 tracking-widest">★★★★★</div>
+            <p class="text-light mb-4 flex-grow">"Best realism tattoo I've ever seen. Fundz took my half-baked idea and turned it into a masterpiece. Everyone asks who did my sleeve!"</p>
+            <p class="text-accent text-sm mt-auto">— Alex R., Arm Sleeve</p>
+          </div>
+        </div>
+
+        <div class="bg-darker rounded-2xl border border-accent/20 overflow-hidden shadow-xl transition duration-300 hover:scale-[1.01] hover:shadow-primary/20 flex flex-col">
+          <div class="h-40 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Client Sarah" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          </div>
+          <div class="p-5 flex flex-col h-full">
+            <div class="text-2xl text-[#FFD700] mb-3 tracking-widest">★★★★★</div>
+            <p class="text-light mb-4 flex-grow">"I’ve gotten tattoos all over the world — none compare to the precision and artistry here. 10/10. Already planning my next one."</p>
+            <p class="text-accent text-sm mt-auto">— Sarah M., Neo-Traditional Calf</p>
+          </div>
+        </div>
+
+        <div class="bg-darker rounded-2xl border border-accent/20 overflow-hidden shadow-xl transition duration-300 hover:scale-[1.01] hover:shadow-primary/20 flex flex-col">
+          <div class="h-40 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Client Jordan" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          </div>
+          <div class="p-5 flex flex-col h-full">
+            <div class="text-2xl text-[#FFD700] mb-3 tracking-widest">★★★★★</div>
+            <p class="text-light mb-4 flex-grow">"Minimal script on wrist — clean, crisp, exactly what I wanted. Studio was spotless. Deposit was worth every penny for the peace of mind."</p>
+            <p class="text-accent text-sm mt-auto">— Jordan K., Fine Line Wrist</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-dark py-20 px-6" id="booking">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-4xl md:text-5xl font-heading text-primary text-center mb-6 [text-shadow:_0_2px_5px_rgba(230,57,70,0.3)]">LOCK IN YOUR SPOT NOW</h2>
+      <p class="text-center mb-8 text-lg text-grayText">Only 3 slots left this month. First come, first served.</p>
+
+      <div class="bg-darker p-8 md:p-12 rounded-3xl shadow-2xl border border-primary/40">
+        <form id="bookingForm" class="space-y-6">
+          <div class="form-group">
+            <label class="block mb-2 font-semibold text-accent text-lg">Name</label>
+            <input type="text" required class="w-full p-4 border border-gray-700 bg-darker text-light rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition" />
+          </div>
+          <div class="form-group">
+            <label class="block mb-2 font-semibold text-accent text-lg">Email</label>
+            <input type="email" required class="w-full p-4 border border-gray-700 bg-darker text-light rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition" />
+          </div>
+          <div class="form-group">
+            <label class="block mb-2 font-semibold text-accent text-lg">Phone (for design calls)</label>
+            <input type="tel" required class="w-full p-4 border border-gray-700 bg-darker text-light rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition" />
+          </div>
+          <div class="form-group">
+            <label class="block mb-2 font-semibold text-accent text-lg">Tattoo Idea (be specific)</label>
+            <textarea rows="4" placeholder="E.g., 'Hyper-realistic lion with galaxy eyes on forearm, 6x4 inches'" required class="w-full p-4 border border-gray-700 bg-darker text-light rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="block mb-2 font-semibold text-accent text-lg">Preferred Date (Next 30 days)</label>
+            <input type="date" required class="w-full p-4 border border-gray-700 bg-darker text-light rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition" />
+          </div>
+
+          <div class="bg-[#330000]/70 text-[#FFB3B3] p-4 rounded-xl text-center border border-[#660000]/50">
+            $150 NON-REFUNDABLE DEPOSIT REQUIRED TO SECURE SLOT<br>
+            Fully credited toward final price. Filters out flakes. Serious inquiries only.
+          </div>
+
+          <button type="submit" class="submit-btn w-full bg-primary text-light px-6 py-4 text-xl font-bold rounded-full transition duration-300 hover:scale-[1.02] shadow-xl hover:shadow-primary/70">
+            PAY $150 DEPOSIT & BOOK NOW
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-10 px-6 bg-darker border-t border-gray-900">
+    <p class="text-sm text-grayText">&copy; 2025 TattooFundz. All rights reserved. | No walk-ins. Booked by appointment only.</p>
+  </footer>
+
+  <script>
+    // Simple filter
+    function filter(category) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active', 'bg-primary', 'border-primary/50'));
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.add('bg-[#333]/50', 'border-grayText/50'));
+      
+      const activeButton = event.target;
+      activeButton.classList.remove('bg-[#333]/50', 'border-grayText/50');
+      activeButton.classList.add('active', 'bg-primary', 'border-primary/50');
+
+      document.querySelectorAll('.portfolio-item').forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Initialize the active state for the 'All' button on load
+    document.addEventListener('DOMContentLoaded', () => {
+        const allButton = document.querySelector('.filter-btn.active');
+        if (allButton) {
+            allButton.classList.remove('bg-[#333]/50', 'border-grayText/50');
+            allButton.classList.add('bg-primary', 'border-primary/50');
+        }
+    });
+
+    // Form submission (demo)
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Deposit received! You’ll get a design mockup within 24 hours. Let’s make art.');
+    });
+  </script>
+
+</body>
+</html>
